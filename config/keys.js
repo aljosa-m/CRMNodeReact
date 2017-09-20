@@ -1,3 +1,5 @@
-module.exports = {
-  mongoURI: 'mongodb://al-crm:password111@ds141514.mlab.com:41514/al-crm-dev'
+if (process.env.NODE_ENV === 'production'){
+  module.exports = require('./prod')
+} else {
+  module.exports = require('./dev');
 }
