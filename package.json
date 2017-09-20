@@ -9,18 +9,24 @@
   },
   "scripts": {
     "start": "node index.js",
-    "dev": "nodemon index.js"
+    "server": "nodemon index.js",
+    "client": "npm run start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "bcrypt": "^1.0.3",
+    "bcrypt-nodejs": "0.0.3",
     "body-parser": "^1.18.1",
+    "concurrently": "^3.5.0",
     "connect-mongo": "^1.3.2",
     "express": "^4.15.4",
     "express-session": "^1.15.5",
+    "jwt-simple": "^0.5.1",
     "mongoose": "^4.11.11",
-    "passport": "^0.4.0",
+    "morgan": "^1.8.2",
+    "passport": "0.3.2",
+    "passport-jwt": "2.0.0",
     "passport-local": "^1.0.0",
     "passport-local-mongoose": "^4.2.1"
   }
