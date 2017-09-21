@@ -2,10 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
-import {Router, Route, IndexRoute, browserHistory } from 'react-router';
+import {Router, Route, browserHistory } from 'react-router';
 import reduxThunk from 'redux-thunk';
 
-import App from './components/app';
+import App from './components/App';
 import Signin from './components/auth/Signin';
 import Signout from './components/auth/Signout';
 import Signup from './components/auth/Signup';

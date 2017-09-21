@@ -7,7 +7,7 @@ function tokenForUser(user) {
   return jwt.encode({sub: user.id, iat: timestamp}, config.secret);
 }
 
-exports.signin = (req, res, next) => {
+exports.signin = function(req, res, next) {
   res.send({token: tokenForUser(req.user)})
 }
 
