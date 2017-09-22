@@ -25,9 +25,9 @@ class Header extends Component {
 
   render() {
     return (
-      <nav className="navbar navbar-light">
-        <Link to="/" className="navbar-brand">CRM</Link>
-        <ul className="nav navbar-nav">
+      <nav className="nav-wrapper blue darken-1">
+        <Link to="/" className="brand-logo center">CRM</Link>
+        <ul id="nav-mobile" className="right hide-on-med-and-down">
           {this.renderLinks()}
         </ul>
       </nav>
