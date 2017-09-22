@@ -35,6 +35,8 @@ class Signin extends Component {
 
 		return (
 			<Form onSubmit={handleSubmit(this.handleFormSubmit.bind(this))}>
+				<br />
+				<br />
 				<div className="form-group">
 					<label>Email:</label>
 					<Field name="email" type="email" component={renderInput} />
@@ -44,7 +46,7 @@ class Signin extends Component {
 					<Field name="password" type="password" component={renderInput} />
 				</div>
 				{this.renderAlert()}
-				<button action="submit" className="btn btn-primary">
+				<button action="submit" className="waves-effect waves-light btn blue darken-1">
 					Sign in
 				</button>
 			</Form>

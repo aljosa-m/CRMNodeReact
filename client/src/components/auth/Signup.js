@@ -34,6 +34,8 @@ class Signup extends Component {
 		const { handleSubmit } = this.props;
 		return (
 			<Form onSubmit={handleSubmit(this.handleFormSubmit.bind(this))}>
+				<br />
+				<br/ >
 				<div className="form-group">
 					<Field
 						name="email"
@@ -75,7 +77,7 @@ class Signup extends Component {
 					/>
 				</div>
 				{this.renderAlert()}
-				<button action="submit" className="btn btn-primary">
+				<button action="submit" className="waves-effect waves-light btn blue darken-1">
 					Sign up!
 				</button>
 			</Form>
