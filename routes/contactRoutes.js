@@ -17,7 +17,6 @@ module.exports = app => {
       constactLastName,
       contactEmail,
       contactTelephone,
-      contactDob,
       contactAddress
     })).save()
     res.send('contact')

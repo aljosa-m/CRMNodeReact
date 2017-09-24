@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { browserHistory } from 'react-router';
-import { AUTH_USER, AUTH_ERROR, UNAUTH_USER, FETCH_MESSAGE } from './types';
+import { AUTH_USER, AUTH_ERROR, UNAUTH_USER, FETCH_MESSAGE, FETCH_CONTACTS, CREATE_CONTACT, FETCH_CONTACT, DELETE_CONTACT } from './types';
 
 export function signinUser({ email, password }) {
 	return function(dispatch) {
@@ -55,4 +55,43 @@ export function fetchMessage() {
 				});
 			});
 	};
+}
+
+export function fetchContacts() {
+  const request = axios.get('/api/contacts');
+
+  return {
+    type: FETCH_CONTACTS,
+    payload: request
+  }
+}
+
+export function createContact(values, callback) {
+  const request = axios.post('/api/contacts', values)
+    .then(() => callback());
+
+
+  return {
+    type: CREATE_CONTACT,
+    payload: request
+  }
+}
+
+export function fetchContact(id) {
+  const request = axios.get(`/api/contacts/${id}`)
+
+  return {
+    type: FETCH_CONTACT,
+    payload: request
+  }
+}
+
+export function deleteContact(id, callback) {
+  const request = axios.delete(`/api/contacts/${id}`)
+    .then(() => callback());
+
+  return {
+    type: DELETE_CONTACT,
+    payload: id
+  }
 }

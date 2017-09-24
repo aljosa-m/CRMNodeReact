@@ -11,6 +11,7 @@ import Signin from './components/auth/Signin';
 import Signout from './components/auth/Signout';
 import Signup from './components/auth/Signup';
 import HomePage from './components/HomePage'
+import ContactNew from './components/contacts/ContactNew';
 import Authentication from './components/auth/require_auth';
 import reducers from './reducers';
 import {AUTH_USER} from './actions/types'
@@ -32,7 +33,7 @@ ReactDOM.render(
         <Route path="signout" component={Signout} />
         <Route path="signup" component={Signup} />
         <Route path="feature" component={Authentication(HomePage)} />
-
+        <Route path="client/new" component={Authentication(ContactNew)} />
       </Route>
     </Router>
   </Provider>
