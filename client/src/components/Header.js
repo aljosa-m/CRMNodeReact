@@ -5,9 +5,18 @@ import {Link} from 'react-router';
 class Header extends Component {
   renderLinks(){
     if (this.props.authenticated) {
-      return <li className="nav-item" key={1}>
-        <Link className="nav-link" to="/signout">Sign Out</Link>
-      </li>
+      return (
+        <div>
+          <li className="nav-item" key={4}>
+            <Link className="nav-link" to="/client/new">Add New Client</Link>
+          </li>
+          <li className="nav-item" key={1}>
+            <Link className="nav-link" to="/signout">Sign Out</Link>
+          </li>
+          
+        </div>
+
+      )
     } else {
       return (
         <div>
