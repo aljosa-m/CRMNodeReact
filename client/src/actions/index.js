@@ -66,15 +66,11 @@ export function fetchContacts() {
   }
 }
 
-export function createContact(values, callback) {
-  const request = axios.post('/api/contacts', values)
-    .then(() => callback());
+export const createContact = (values, history) => async dispatch =>  {
+  const res = await axios.post('/api/contacts', values)
 
-
-  return {
-    type: CREATE_CONTACT,
-    payload: request
-  }
+		browserHistory.push('/feature');
+		dispatch({ type: CREATE_CONTACT, payload: res.data})
 }
 
 export function fetchContact(id) {
