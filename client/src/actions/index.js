@@ -57,13 +57,10 @@ export function fetchMessage() {
 	};
 }
 
-export function fetchContacts() {
-  const request = axios.get('/api/contacts');
+export const fetchContacts = () => async dispatch => {
+  const res = await axios.get('/api/contacts');
 
-  return {
-    type: FETCH_CONTACTS,
-    payload: request
-  }
+	dispatch({type: FETCH_CONTACTS, payload: res.data.contacts })
 }
 
 export const createContact = (values, history) => async dispatch =>  {

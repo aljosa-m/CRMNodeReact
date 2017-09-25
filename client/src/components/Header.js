@@ -8,12 +8,15 @@ class Header extends Component {
       return (
         <div>
           <li className="nav-item" key={4}>
-            <Link className="nav-link" to="/client/new">Add New Client</Link>
+            <Link className="nav-link" to="/contact/new">Add New Client</Link>
+          </li>
+          <li className="nav-item" key={5}>
+            <Link className="nav-link" to="/contacts">Client Index</Link>
           </li>
           <li className="nav-item" key={1}>
             <Link className="nav-link" to="/signout">Sign Out</Link>
           </li>
-          
+
         </div>
 
       )
