@@ -1,7 +1,7 @@
 import _ from 'lodash';
 import { FETCH_CONTACTS, FETCH_CONTACT, DELETE_CONTACT } from '../actions/types';
 
-export default function(state = {}, action) {
+export default function(state = [], action) {
   switch (action.type) {
     case DELETE_CONTACT:
       return _.omit(state, action.payload);
@@ -14,7 +14,7 @@ export default function(state = {}, action) {
       return {...state, [action.payload.data.id]: action.payload.data};
 
     case FETCH_CONTACTS:
-      return _.mapKeys(action.payload.data, 'id');
+      return action.payload;
     default:
       return state;
   }

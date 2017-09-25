@@ -6,18 +6,18 @@ const requireLogin = require('../middlewares/requireLogin');
 
 
 module.exports = app => {
-  app.get('/api/contacts', requireLogin, async(req, res) => {
+  app.get('/api/contacts', async(req, res) => {
     const contacts = await Contact.find()
     res.send({contacts})
   })
 
   app.post('/api/contacts', async(req, res) => {
-    const {contactTitle, contactName, constactLastName, contactEmail, contactTelephone, contactDob, contactAddress} = req.body;
+    const {contactTitle, contactName, contactLastName, contactEmail, contactTelephone, contactAddress} = req.body;
 
     const contact = await (new Contact({
       contactTitle,
       contactName,
-      constactLastName,
+      contactLastName,
       contactEmail,
       contactTelephone,
       contactAddress

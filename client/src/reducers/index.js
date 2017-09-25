@@ -3,10 +3,8 @@ import { reducer as form } from 'redux-form';
 import authReducer from './auth_reducer';
 import contactReducer from './contacts_reducer'
 
-const rootReducer = combineReducers({
+export default combineReducers({
 	form: form,
   auth: authReducer,
-	contacts: contactReducer 
+	contacts: contactReducer
 });
-
-export default rootReducer;
