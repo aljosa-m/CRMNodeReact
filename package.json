@@ -28,6 +28,7 @@
     "passport": "0.3.2",
     "passport-jwt": "2.0.0",
     "passport-local": "^1.0.0",
-    "passport-local-mongoose": "^4.2.1"
+    "passport-local-mongoose": "^4.2.1",
+    "path-parser": "^2.0.2"
   }
 }

@@ -5,7 +5,8 @@ const morgan = require('morgan');
 const mongoose = require('mongoose');
 const keys = require('./config/keys');
 // const session = require('express-session');
-
+require('./models/Contact');
+require('./models/User');
 
 
 mongoose.connect(keys.mongoURI);
@@ -19,6 +20,8 @@ app.use(bodyParser.urlencoded({
 }));
 
 require('./routes/authRoutes')(app);
+require('./routes/contactRoutes')(app);
+
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT);
