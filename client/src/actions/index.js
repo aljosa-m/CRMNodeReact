@@ -70,13 +70,10 @@ export const createContact = (values, history) => async dispatch =>  {
 		dispatch({ type: CREATE_CONTACT, payload: res.data})
 }
 
-export function fetchContact(id) {
-  const request = axios.get(`/api/contacts/${id}`)
+export const fetchContact = (id) => async dispatch => {
+  const res = await axios.get(`/api/contacts/${id}`)
 
-  return {
-    type: FETCH_CONTACT,
-    payload: request
-  }
+	dispatch({type: FETCH_CONTACT, payload: res.data.contact})
 }
 
 export function deleteContact(id, callback) {

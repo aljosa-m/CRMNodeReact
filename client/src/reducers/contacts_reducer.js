@@ -11,7 +11,8 @@ export default function(state = [], action) {
       // newState[post.id] = post
       // return newState;
 
-      return {...state, [action.payload.data.id]: action.payload.data};
+      return {...state, [action.payload._id]: action.payload};
+
 
     case FETCH_CONTACTS:
       return action.payload;

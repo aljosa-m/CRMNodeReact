@@ -13,7 +13,7 @@ class ContactList extends Component {
 			console.log(contact);
 			return (
 				<div className="collection" key={contact._id}>
-					<Link to="/" className="collection-item">
+					<Link to={`/contacts/${contact._id}`} className="collection-item">
 						{contact.contactName}
 					</Link>
 				</div>
