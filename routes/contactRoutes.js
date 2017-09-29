@@ -35,4 +35,9 @@ module.exports = app => {
     const contact = await Contact.findOne({_id: req.params.id})
     res.send({contact})
   })
+
+  app.delete('/api/contacts/:id/delete', async(req, res) => {
+    const contact = await Contact.findOneAndRemove({_id: req.params.id})
+    res.send({contact})
+  })
 }

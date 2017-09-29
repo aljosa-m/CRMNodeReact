@@ -14,7 +14,13 @@ class ContactList extends Component {
 			return (
 				<div className="collection" key={contact._id}>
 					<Link to={`/contacts/${contact._id}`} className="collection-item">
-						{contact.contactName}
+          <div className="row">
+            <div className="col s3">{contact.contactName}</div>
+            <div className="col s3">{contact.contactLastName}</div>
+            <div className="col s3">{contact.contactEmail}</div>
+            <div className="col s3 right-align">{contact.contactTelephone}</div>
+          </div>
+
 					</Link>
 				</div>
 			);
