@@ -76,12 +76,9 @@ export const fetchContact = (id) => async dispatch => {
 	dispatch({type: FETCH_CONTACT, payload: res.data.contact})
 }
 
-export function deleteContact(id, callback) {
-  const request = axios.delete(`/api/contacts/${id}`)
-    .then(() => callback());
+export const deleteContact = (id, callback) => async dispatch => {
+  const res = await axios.delete(`/api/contacts/${id}/delete`)
 
-  return {
-    type: DELETE_CONTACT,
-    payload: id
-  }
+	browserHistory.push('/contacts')
+	dispatch({type: DELETE_CONTACT, payload: res.data})
 }
