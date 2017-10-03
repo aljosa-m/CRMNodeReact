@@ -7,6 +7,7 @@ const keys = require('./config/keys');
 // const session = require('express-session');
 require('./models/Contact');
 require('./models/User');
+require('./models/Company');
 
 
 mongoose.connect(keys.mongoURI);
@@ -21,6 +22,7 @@ app.use(bodyParser.urlencoded({
 
 require('./routes/authRoutes')(app);
 require('./routes/contactRoutes')(app);
+require('./routes/companiesRoutes')(app);
 
 
 const PORT = process.env.PORT || 5000;
