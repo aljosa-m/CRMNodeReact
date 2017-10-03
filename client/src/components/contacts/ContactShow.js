@@ -49,7 +49,7 @@ class ContactShow extends Component {
 						Name: <strong> {contact.contactName} {contact.contactLastName} </strong><br />
 						Telephone: <strong> {contact.contactTelephone} </strong><br />
 						Address: <strong> {contact.contactAddress} </strong><br />
-						<button onClick={this.onDeleteClick.bind(this)}>
+						<button className="waves-effect waves-light btn red darken-1 button-right" onClick={this.onDeleteClick.bind(this)}>
 							Delete Contact
 						</button>
 			    </div>
