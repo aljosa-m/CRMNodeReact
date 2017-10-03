@@ -6,3 +6,7 @@ export const FETCH_CONTACTS = 'fetch_contacts';
 export const CREATE_CONTACT = 'create_contact';
 export const FETCH_CONTACT = 'fetch_contact';
 export const DELETE_CONTACT = 'delete_contact';
+export const FETCH_COMPANIES = 'fetch_companies';
+export const CREATE_COMPANY = 'create_company';
+export const FETCH_COMPANY = 'fetch_company';
+export const DELETE_COMPANY = 'delete_company';
