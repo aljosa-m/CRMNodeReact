@@ -16,6 +16,7 @@ import ContactNew from './components/contacts/ContactNew';
 import ContactList from './components/contacts/ContactList';
 import ContactShow from './components/contacts/ContactShow';
 import CompanyNew from './components/companies/CompanyNew';
+import CompanyList from './components/companies/CompanyList';
 import Authentication from './components/auth/require_auth';
 import reducers from './reducers';
 import {AUTH_USER} from './actions/types'
@@ -41,6 +42,7 @@ ReactDOM.render(
         <Route path="contacts/:id" component={Authentication(ContactShow)}/>
         <Route path="contacts" component={Authentication(ContactList)} />
         <Route path="company/new" component={Authentication(CompanyNew)} />
+        <Route path="companies" component={Authentication(CompanyList)} />
       </Route>
     </Router>
   </Provider>

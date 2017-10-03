@@ -16,6 +16,9 @@ class Header extends Component {
           <li className="nav-item" key={6}>
             <Link className="nav-link" to="/company/new">Add New Company</Link>
           </li>
+          <li className="nav-item" key={7}>
+            <Link className="nav-link" to="/companies">Company Index</Link>
+          </li>
           <li className="nav-item" key={1}>
             <Link className="nav-link" to="/signout">Sign Out</Link>
           </li>
